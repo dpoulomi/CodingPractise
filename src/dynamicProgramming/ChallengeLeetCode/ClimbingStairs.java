@@ -12,6 +12,7 @@ public class ClimbingStairs {
 
   private int findNumberOfWays(int numberOfSteps, int[] ways) {
 
-    int[] numberOfWays = new int[numberOfSteps + 1]
+    int[] numberOfWays = new int[numberOfSteps + 1];
+    return numberOfWays[numberOfSteps];
   }
 }
