@@ -8,12 +8,12 @@ public class DetectEvents {
 
   public static void main(String[] args) {
     DetectEvents detectEvents = new DetectEvents();
-    detectEvents.findCriticalEvents();
-  }
-
-  private void findCriticalEvents() {
     int[] arr = { 4, 2, 1, 6 };
     int threshold = -1;
+    detectEvents.findCriticalEvents(arr, threshold);
+  }
+
+  private void findCriticalEvents(int[] arr, int threshold) {
     int events = 0;
     for (int i = 0; i < arr.length; i++) {
       for (int j = i + 1; j < arr.length; j++) {
