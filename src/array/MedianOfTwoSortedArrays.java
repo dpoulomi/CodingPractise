@@ -3,17 +3,20 @@ package array;
 public class MedianOfTwoSortedArrays {
 
   public static void main(String[] args) {
-
+    int[] nums1 = { 1, 5 };
+    int[] nums2 = { 3};
+    MedianOfTwoSortedArrays medianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
+    System.out.println(medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2));
   }
 
   double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
-    if (nums2.length < nums1.length)
+    if (nums2.length < nums1.length) {
       return findMedianSortedArrays(nums2, nums1);
+    }
 
     int n1 = nums1.length;
     int n2 = nums2.length;
-
     int low = 0, high = n1;
 
     while (low <= high) {
