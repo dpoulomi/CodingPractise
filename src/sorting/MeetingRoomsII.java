@@ -9,7 +9,8 @@ public class MeetingRoomsII {
 
   public static void main(String[] args) {
     MeetingRoomsII meetingRoomsII = new MeetingRoomsII();
-    int[][] intervals = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
+   // int[][] intervals = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
+    int[][] intervals = { { 7, 10 }, { 2, 4 } };
     System.out.println(meetingRoomsII.minMeetingRooms(intervals));
   }
 
@@ -26,7 +27,7 @@ public class MeetingRoomsII {
     });
     meetingRoom.add(intervals[0][1]);
     for (int i = 1; i < intervals.length; i++) {
-      if (intervals[i][0] > meetingRoom.peek()) {
+      if (intervals[i][0] >= meetingRoom.peek()) {
         meetingRoom.poll();
       }
       meetingRoom.add(intervals[i][1]);
